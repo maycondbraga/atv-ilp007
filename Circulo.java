@@ -1,46 +1,28 @@
-public class Circulo
-{
-	private double _raio;
+import java.lang.Math;
 
-   public Circulo()
-   {
-   }   
-   
-   public Circulo(double r)
-   {
-      setRaio(r);
-   }
+public class Circulo extends FormaGeometrica{
+    private double raio;
 
-	public void setRaio(double raio)
-	{
-      if (raio < 0)
-         System.out.println("Raio invalido.");
-      else
-      	_raio = raio;
-	}
+    public Circulo(double raio){
+        setRaio(raio);
+    }
 
-	public double getRaio()
-	{
-		return _raio;
-	}
+    public double getRaio(){
+        return raio;
+    }
 
-	public double getDiametro(){
-		return 2 * _raio;
-	}
-	
-	public double getArea() {
-		return (Math.PI * (Math.pow(_raio, 2)));
-	}
-	
-	public double getCircunferencia() {
-		return ((2 * Math.PI) * _raio);
-	}
+    public void setRaio(double raio){
+        if(raio<0) this.raio = 0;
+        else this.raio = raio;
+    }
 
-	public void exibeDados()
-	{
-		System.out.printf("\n\nDados do circulo de raio: %.2f", getRaio());
-  		System.out.printf("\nDiametro      : %.2f", getDiametro());
-  		System.out.printf("\nCircunferencia: %.2f", getCircunferencia());
-  		System.out.printf("\nArea          : %.2f", getArea());
-	}
+    public double area(){
+        return (Math.PI * Math.pow(raio, 2));
+    }
+
+    public void imprime(){
+        System.out.println("Dados do Circulo");
+        super.imprime();
+        System.out.println("Raio: " + raio);
+    }
 }

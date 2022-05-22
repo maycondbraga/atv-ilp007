@@ -1,8 +1,8 @@
-public class Retangulo extends FormaGeometrica{
+public class Triangulo extends FormaGeometrica{
     private double base, altura;
 
-    public Retangulo(double base, double altura){
-        super.setLados(4);
+    public Triangulo(double base, double altura){
+        super.setLados(3);
         setBase(base);
         setAltura(altura);
     }
@@ -26,11 +26,11 @@ public class Retangulo extends FormaGeometrica{
     }
 
     public double area(){
-        return base * altura;
+        return (base * altura)/2;
     }
 
     public void imprime(){
-        System.out.println("Dados do Retangulo");
+        System.out.println("Dados do Triangulo");
         super.imprime();
         System.out.println("Base: " + base);
         System.out.println("Altura: " + altura);

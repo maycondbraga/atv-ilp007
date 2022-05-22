@@ -6,7 +6,7 @@ public class Atividade09
    {
       double raio;
    	Scanner input = new Scanner(System.in);
-   	Circulo c = new Circulo();
+   	CirculoOld c = new CirculoOld();
    	
    	System.out.println("Digite o valor do raio: ");
    	raio = input.nextDouble();
